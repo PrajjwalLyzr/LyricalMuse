@@ -1,4 +1,17 @@
 import streamlit as st
+from st_social_media_links import SocialMediaIcons
+
+
+def social_media():
+    # This function will help you to render socila media icons with link on the app
+    social_media_links = [
+    "https://www.youtube.com/@LyzrAI",
+    "https://www.instagram.com/lyzr.ai/",
+    "https://www.linkedin.com/company/lyzr-platform",
+    ]   
+
+    social_media_icons = SocialMediaIcons(social_media_links)
+    social_media_icons.render(sidebar=True, justify_content="space-evenly") # will render in the sidebar
 
 
 def style_app():
@@ -24,9 +37,9 @@ def page_config(layout = "centered"):
     )
 
 def template_end():
-    with st.expander("ℹ️ - About this App"):
-        st.markdown("This app uses Lyzr's Automata to generate original song lyrics tailored to their chosen mood, theme, genre, and any additional specifications.")
-        st.link_button("Lyzr", url='https://www.lyzr.ai/', use_container_width = True)
-        st.link_button("Book a Demo", url='https://www.lyzr.ai/book-demo/', use_container_width = True)
-        st.link_button("Discord", url='https://discord.gg/nm7zSyEFA2', use_container_width = True)
-        st.link_button("Slack", url='https://join.slack.com/t/genaiforenterprise/shared_invite/zt-2a7fr38f7-_QDOY1W1WSlSiYNAEncLGw', use_container_width = True)
+    with st.sidebar.expander("ℹ️ - About this App"):
+        st.sidebar.markdown("This app uses Lyzr's Automata to generate original song lyrics tailored to their chosen mood, theme, genre, and any additional specifications.")
+        st.sidebar.link_button("Lyzr", url='https://www.lyzr.ai/', use_container_width = True)
+        st.sidebar.link_button("Book a Demo", url='https://www.lyzr.ai/book-demo/', use_container_width = True)
+        st.sidebar.link_button("Discord", url='https://discord.gg/nm7zSyEFA2', use_container_width = True)
+        st.sidebar.link_button("Slack", url='https://join.slack.com/t/genaiforenterprise/shared_invite/zt-2a7fr38f7-_QDOY1W1WSlSiYNAEncLGw', use_container_width = True)

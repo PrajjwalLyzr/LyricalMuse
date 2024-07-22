@@ -8,6 +8,7 @@ from lyrics import lyris_generator
 utils.page_config()
 utils.style_app()
 
+
 # Load and display the logo
 image = Image.open("./logo/lyzr-logo.png")
 st.image(image, width=150)
@@ -42,4 +43,7 @@ if API_KEY != "":
                 st.markdown('---')
                 st.write(lyrics)
 
-            
+
+st.sidebar.markdown('---')
+utils.template_end()
+utils.social_media()
