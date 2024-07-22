@@ -8,7 +8,7 @@ def social_media():
     "https://www.youtube.com/@LyzrAI",
     "https://www.instagram.com/lyzr.ai/",
     "https://www.linkedin.com/company/lyzr-platform/posts/?feedView=all",
-    ]   
+                        ]   
 
     social_media_icons = SocialMediaIcons(social_media_links)
     social_media_icons.render(sidebar=True, justify_content="space-evenly") # will render in the sidebar
